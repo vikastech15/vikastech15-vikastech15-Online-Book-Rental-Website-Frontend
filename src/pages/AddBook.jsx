@@ -8,6 +8,7 @@ import { IoMdSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/navbar";
 import ImageUploader from "../components/ImageUploader";
+import { API_URL } from "../config";
 
 const genreOptions = [
   { value: "Fiction", label: "Fiction" },
@@ -57,7 +58,7 @@ const AddBook = () => {
     images.forEach(image => formData.append("images", image));
 
     try {
-      await axios.post("/api/books", formData, {
+      await axios.post(`${API_URL}/api/books`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Book submitted successfully!");
