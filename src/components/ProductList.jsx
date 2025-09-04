@@ -50,11 +50,11 @@ const TopOrderPage = () => {
           if (filter === "rental") {
             filteredBooks = filteredBooks.filter(
               
-              (book) => book.rentalPrice !== null
+              (book) => book.forRent ===true
             );
-          } else if (filter === "Sale") {
+          } else if (filter === "sale") {
             filteredBooks = filteredBooks.filter(
-              (book) => book.type === "Sale"
+              (book) => book.forSale ===true
             );
           } else {
             filteredBooks = filteredBooks.filter(
