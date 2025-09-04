@@ -82,7 +82,7 @@ const AdminDashboard = () => {
   // };
   const deleteUser = async (userId) => {
   try {
-    const res = await fetch(`/api/admin/users/${userId}`, { method: 'DELETE' });
+    const res = await fetch(`${API_URL}/api/admin/users/${userId}`, { method: 'DELETE' });
     const data = await res.json();
 
     if (!res.ok) {
@@ -107,7 +107,7 @@ const AdminDashboard = () => {
   const deleteBook = async (bookId) => {
     console.log(bookId)
     try {
-      await fetch(`/api/admin/books/${bookId}`, { method: 'DELETE' });
+      await fetch(`${API_URL}/api/admin/books/${bookId}`, { method: 'DELETE' });
       setBooks(books.filter(book => book._id !== bookId));
       setConfirmDelete(null);
     } catch (error) {
