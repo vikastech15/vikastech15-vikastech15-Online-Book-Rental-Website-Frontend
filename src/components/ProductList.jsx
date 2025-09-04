@@ -4,6 +4,7 @@ import { addToCart, removeFromCart, clearCart } from '../redux/features/cart/car
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 import {
   StarIcon,
   BookmarkIcon,
@@ -40,7 +41,7 @@ const TopOrderPage = () => {
     const fetchTopBooks = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:5000/api/browse");
+        const response = await fetch(`${API_URL}/api/browse`);
         const data = await response.json();
 
         let filteredBooks = [...data];
