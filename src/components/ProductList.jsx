@@ -279,7 +279,7 @@ const TopOrderPage = () => {
                       src={
                         book.images[0].url.startsWith("http")
                           ? book.images[0].url
-                          : `http://localhost:5000/${book.images[0].url}`
+                          : `${API_URL}/${book.images[0].url}`
                       }
                       alt={book.title}
                       className="w-full h-full object-cover"
