@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { API_URL } from "../config";
 import Navbar from "../components/navbar";
 import {
   TrashIcon,
@@ -40,8 +41,8 @@ const AdminDashboard = () => {
       setLoading(true);
       try {
         // Replace with actual API calls
-        const usersResponse = await fetch('/api/admin/users');
-        const booksResponse = await fetch('/api/admin/books');
+        const usersResponse = await fetch(`${API_URL}/api/admin/users`);
+        const booksResponse = await fetch(`${API_URL}/api/admin/books`);
         
         const usersData = await usersResponse.json();
         const booksData = await booksResponse.json();
