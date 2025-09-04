@@ -1,0 +1,145 @@
+
+
+.red
+{
+    background-image: url("./carousel/book1.jpg");
+    background-position-y: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.text-content
+{
+    padding-top: 100px;
+    position: absolute;
+    top: 130px;
+    width: 60%;
+    height: 70%;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: rgba(226, 217, 217, 0.89);
+
+}
+
+.browse-heading
+{
+    padding-top: 15px;
+    margin-bottom: 30px;
+    color: rgb(20,42,23);
+    font-size: 50px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.browse-content
+{
+    padding: 16 6px;
+    color: rgb(169,127,57);
+    /* color: rgb(0, 216, 249); */
+    font-size: 20px;
+    font-weight: 650;
+}
+
+
+.btn-connect
+{
+    margin-top: 40px;
+    padding: 3px 25px;
+    border: 2px solid rgb(255, 166, 111);
+    border-radius: 7px;
+    /* background-color: rgb(233, 206, 206); */
+    /* background-color: rgb(255, 215, 215); */
+
+    color: rgb(92, 11, 11);
+    font-weight: 500;
+    background: linear-gradient(to right, rgb(255, 228, 191) 50%, #ffaa83 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-position 0.5s ease-in;
+
+  
+}
+
+.btn-connect:hover{
+    background-position: right bottom;
+    /* box-shadow: 0 0 15px 4px #ff8e38; */
+    /* transition: transform 0.2s ease-in; */
+    transform: scale(1.02);
+}
+
+.green
+{
+   /* border: 5px solid white; */
+   background-image: url("./carousel/book2.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+
+
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.connect-text
+{
+    margin-left: 80px;
+    padding-top: 80px;
+    /* padding-left: 45px; */
+    width: 49%;
+    height: 95%;
+    /* border: 3px solid rgba(108, 14, 14, 0.623); */
+    background-color: rgba(226, 217, 217, 0.89);
+
+    /* font-family: "Poetsen One", sans-serif; */
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.btn
+{
+    margin: 8px 40px ;
+    padding: 10px 14px;
+    width: 16rem;
+    border: 4px solid rgb(10, 4, 160);
+    border-radius: 60px;
+    background-color:rgb(255, 224, 224);
+    color: rgb(255, 245, 245);
+    font-size: 25px;
+    font-weight: 800;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+}
+
+.blue
+{
+    background-image: url("./carousel/book3.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.community-content
+{
+    padding-top: 50px;
+    width: 70%;
+    height: 60%;
+    /* border: 3px solid rgb(141, 29, 29); */
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+     background-color: rgba(226, 217, 217, 0.89);
+    
+    
+}
+
+
