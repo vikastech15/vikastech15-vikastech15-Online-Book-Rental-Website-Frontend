@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion, AnimatePresence } from "framer-motion";
 import { jwtDecode } from "jwt-decode";
-import { API_URL } from "../config";
+import { API_URL } from "../../config";
 
 export default function AddDeliveryAddress() {
   const [addresses, setAddresses] = useState([
