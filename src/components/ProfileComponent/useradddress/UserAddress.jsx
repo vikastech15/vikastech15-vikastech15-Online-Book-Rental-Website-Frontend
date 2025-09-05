@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion, AnimatePresence } from "framer-motion";
 import { jwtDecode } from "jwt-decode";
+import { API_URL } from "../config";
 
 export default function AddDeliveryAddress() {
   const [addresses, setAddresses] = useState([
@@ -33,7 +34,7 @@ export default function AddDeliveryAddress() {
   useEffect(() => {
     const fetchAddresses = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/get-address", {
+        const res = await fetch(`${API_URL}/api/get-address`, {
           method: "POST", // Changed from GET to POST to send email in body
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email }),
@@ -90,7 +91,7 @@ export default function AddDeliveryAddress() {
   
     // Call delete route
     try {
-      await fetch("http://localhost:5000/api/delete-address", {
+      await fetch(`${API_URL}/api/delete-address`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, index }),
@@ -107,7 +108,7 @@ export default function AddDeliveryAddress() {
     setSaveStatus({ success: null, message: "" });
 
     try {
-      const res = await fetch("http://localhost:5000/api/save-addresses", {
+      const res = await fetch(`${API_URL}/api/save-addresses`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, addresses }),
