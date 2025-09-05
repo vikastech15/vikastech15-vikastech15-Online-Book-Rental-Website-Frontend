@@ -10,7 +10,7 @@ import {
 } from "@heroicons/react/24/solid";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { API_URL } from "../../config";
+import { API_URL } from "../../../config";
 
 const UserProfile = () => {
   const [formData, setFormData] = useState({
