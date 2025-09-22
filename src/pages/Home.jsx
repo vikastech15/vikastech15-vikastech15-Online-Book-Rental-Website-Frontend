@@ -11,18 +11,12 @@ const home = () => {
     <>
       <Navbar/>
     <Carousel/>
-    <div className='landing-page-body'>
-      <Mainbody/>
-
-    </div>
+   
     <div className='form-input m-8'>
       <FormSection/>
 
     </div>
-    <div className='Footer-div'>
-      <Footer/>
-
-    </div>
+   
     <div className='Chat-bot'>
 
        <ChatBot/>
