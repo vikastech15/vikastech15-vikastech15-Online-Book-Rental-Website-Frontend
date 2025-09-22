@@ -7,26 +7,21 @@
     background-size: cover;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .text-content
 {
-    padding-top: 100px;
-    position: absolute;
-    top: 130px;
     width: 60%;
     height: 70%;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
     background-color: rgba(226, 217, 217, 0.89);
 
 }
 
 .browse-heading
 {
-    padding-top: 15px;
-    margin-bottom: 30px;
     color: rgb(20,42,23);
     font-size: 50px;
     font-family: "Special Gothic Expanded One", sans-serif;
@@ -46,7 +41,6 @@
 .btn-connect
 {
     margin-top: 40px;
-    padding: 3px 25px;
     border: 2px solid rgb(255, 166, 111);
     border-radius: 7px;
     /* background-color: rgb(233, 206, 206); */
@@ -87,15 +81,9 @@
 
 .connect-text
 {
-    margin-left: 80px;
-    padding-top: 80px;
-    /* padding-left: 45px; */
     width: 49%;
     height: 95%;
-    /* border: 3px solid rgba(108, 14, 14, 0.623); */
     background-color: rgba(226, 217, 217, 0.89);
-
-    /* font-family: "Poetsen One", sans-serif; */
     font-weight: 400;
     font-style: normal;
     text-align: center;
