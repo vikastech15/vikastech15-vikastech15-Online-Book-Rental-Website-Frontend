@@ -44,7 +44,7 @@ const Navbar = () => {
               </Link>
             </div>
 
-            <div className="hidden md:block w-72 relative">
+{/*             <div className="hidden md:block w-72 relative">
               <input
                 type="text"
                 placeholder="Search..."
@@ -55,7 +55,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
                 </svg>
               </div>
-            </div>
+            </div> */}
 
             <div className="md:hidden">
               <button
@@ -154,15 +154,15 @@ const Navbar = () => {
         </div>
 
         {menuOpen && (
-          <div className="md:hidden px-4 pb-4">
-            <div className="mb-4">
+          <div className="md:hidden px-4 pb-4 bg-white">
+{/*             <div className="mb-4">
               <input
                 type="text"
                 placeholder="Search..."
                 className="w-full p-2 ps-10 text-sm border border-gray-200 rounded-md bg-gray-50 focus:ring-1 focus:ring-teal-500 outline-none"
               />
-            </div>
-            <ul className="space-y-2">
+            </div> */}
+            <ul className="space-y-3">
               <li>
                 <NavLink 
                   to="/browse" 
@@ -185,7 +185,7 @@ const Navbar = () => {
               </li>
             </ul>
 
-            <div className="mt-4">
+            <div className="">
               {!isLogin ? (
                 <Link to="/login">
                   <button className="bg-teal-700 hover:bg-emerald-900 text-white w-full py-2 rounded-md">
@@ -200,7 +200,7 @@ const Navbar = () => {
                     <NavLink 
                       to="/profile" 
                       className={({ isActive }) => 
-                        `block text-sm py-1 hover:underline ${isActive ? "text-red-600" : ""}`
+                        `block text-gray-700 py-1 hover:underline ${isActive ? "text-red-600" : ""}`
                       }
                     >
                       Profile
