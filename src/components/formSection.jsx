@@ -1,13 +1,15 @@
 
 const FormSection = () => {
   return (
-    <section className="contact h-[85vh] w-[96%] px-6 py-16 flex justify-between items-center ml-10 mr-10">
-      <div className="content-left w-[55%] h-[30rem] relative">
+    // <section className="contact h-[85vh] w-[96%] px-6 py-16 flex justify-between items-center ml-10 mr-10">
+    //   <div className="content-left w-[55%] h-[30rem] relative">
+    <section className="contact h-[85vh] w-[100%]  flex justify-around items-center 
+                    flex-col lg:flex-row mb-[5%]  ">
+  <div className="content-left pb-2.5 w-full bg-red-300 lg:w-[40vw] h-[30rem] relative pl-[5%]  mb-8 lg:mb-0">
         <h2 className="h2 mt-16 block text-4xl font-medium font-['Poetsen_One']">
-          "Books On Desk – <br />
-          &nbsp; One Platform, Infinite Possibilities"
+          "Books On Desk – <br />One Platform, Infinite Possibilities"
         </h2>
-        <p className="form-p my-4 mx-4 text-xl font-semibold text-[#5f0909] font-sans">
+        <p className="form-p my-4  text-xl font-semibold text-[#5f0909] font-sans">
           Rent. Sell. Connect. A community built around stories. Join the journey.
         </p>
         <div className="social-icons mt-6">
@@ -17,8 +19,9 @@ const FormSection = () => {
         </div>
       </div>
 
-      <div className="contact-form w-[40%] h-[30rem] p-8 bg-white rounded-lg shadow-xl">
-        <form className="space-y-6">
+      {/* <div className="contact-form w-[40%] h-[30rem] p-8 bg-white rounded-lg shadow-xl"> */}
+      <div className="contact-form h-[70%] w-max-[70vw] w-[60%] lg:w-[40vw]  p-8 bg-white rounded-lg shadow-xl">
+        <form className="">
           <div className="grid grid-cols-2 gap-6">
             <div className="relative">
               <input
@@ -86,7 +89,7 @@ const FormSection = () => {
 
           <button
             type="submit"
-            className="form-submit px-8 py-3 text-lg font-medium text-red-700 border-2 border-red-700 rounded-full hover:bg-red-700 hover:text-white transition-all duration-300 hover:shadow-lg"
+            className="form-submit px-8 py-3 text-lg mt-[2%] font-medium text-red-700 border-2 border-red-700 rounded-full hover:bg-red-700 hover:text-white transition-all duration-300 hover:shadow-lg"
           >
             Submit
           </button>
