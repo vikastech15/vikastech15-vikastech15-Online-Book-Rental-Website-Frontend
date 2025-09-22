@@ -12,7 +12,7 @@ const home = () => {
       <Navbar/>
     <Carousel/>
    
-    <div className='form-input m-8'>
+    <div className='form-input mb-8'>
       <FormSection/>
 
     </div>
