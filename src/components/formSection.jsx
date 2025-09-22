@@ -4,7 +4,7 @@ const FormSection = () => {
     // <section className="contact h-[85vh] w-[96%] px-6 py-16 flex justify-between items-center ml-10 mr-10">
     //   <div className="content-left w-[55%] h-[30rem] relative">
     <section className="contact h-[100%] w-[100%]  flex justify-around items-center 
-                    flex-col lg:flex-row mb-[15%]  ">
+                    flex-col lg:flex-row mb-[2%]  ">
   <div className="content-left pb-2.5 w-full bg-red-300 lg:w-[40vw] h-[30rem] relative pl-[5%]  mb-8 lg:mb-0">
         <h2 className="h2 mt-16 block text-4xl font-medium font-['Poetsen_One']">
           "Books On Desk – <br />One Platform, Infinite Possibilities"
