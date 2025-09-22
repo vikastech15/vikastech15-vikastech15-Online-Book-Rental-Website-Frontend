@@ -1,10 +1,146 @@
 
+
+.red
+{
+    background-image: url("./carousel/book1.jpg");
+    background-position-y: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-content
+{
+    width: 60%;
+    height: 70%;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(226, 217, 217, 0.89);
+
+}
+
+.browse-heading
+{
+    color: rgb(20,42,23);
+    font-size: 50px;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.browse-content
+{
+    padding: 16 6px;
+    color: rgb(169,127,57);
+    /* color: rgb(0, 216, 249); */
+    font-size: 20px;
+    font-weight: 650;
+}
+
+
+.btn-connect
+{
+    margin-top: 40px;
+    border: 2px solid rgb(255, 166, 111);
+    border-radius: 7px;
+    /* background-color: rgb(233, 206, 206); */
+    /* background-color: rgb(255, 215, 215); */
+
+    color: rgb(92, 11, 11);
+    font-weight: 500;
+    background: linear-gradient(to right, rgb(255, 228, 191) 50%, #ffaa83 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background-position 0.5s ease-in;
+
+  
+}
+
+.btn-connect:hover{
+    background-position: right bottom;
+    /* box-shadow: 0 0 15px 4px #ff8e38; */
+    /* transition: transform 0.2s ease-in; */
+    transform: scale(1.02);
+}
+
+.green
+{
+   /* border: 5px solid white; */
+   background-image: url("./carousel/book2.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+
+
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.connect-text
+{
+    width: 49%;
+    height: 95%;
+    background-color: rgba(226, 217, 217, 0.89);
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.btn
+{
+    margin: 8px 40px ;
+    padding: 10px 14px;
+    width: 16rem;
+    border: 4px solid rgb(10, 4, 160);
+    border-radius: 60px;
+    background-color:rgb(255, 224, 224);
+    color: rgb(255, 245, 245);
+    font-size: 25px;
+    font-weight: 800;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+}
+
+.blue
+{
+    background-image: url("./carousel/book3.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.community-content
+{
+    padding-top: 50px;
+    width: 70%;
+    height: 60%;
+    /* border: 3px solid rgb(141, 29, 29); */
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+     background-color: rgba(226, 217, 217, 0.89);
+    
+    
+}
+
+
+form sectipn
+
+
+
 const FormSection = () => {
   return (
     // <section className="contact h-[85vh] w-[96%] px-6 py-16 flex justify-between items-center ml-10 mr-10">
     //   <div className="content-left w-[55%] h-[30rem] relative">
-    <section className="contact  h-[85vh] w-[96%]  flex justify-around items-center 
-                    flex-col lg:flex-row pb-8  ">
+    <section className="contact h-[85vh] w-[100%]  flex justify-around items-center 
+                    flex-col lg:flex-row mb-[15%]  ">
   <div className="content-left pb-2.5 w-full bg-red-300 lg:w-[40vw] h-[30rem] relative pl-[5%]  mb-8 lg:mb-0">
         <h2 className="h2 mt-16 block text-4xl font-medium font-['Poetsen_One']">
           "Books On Desk – <br />One Platform, Infinite Possibilities"
@@ -20,7 +156,7 @@ const FormSection = () => {
       </div>
 
       {/* <div className="contact-form w-[40%] h-[30rem] p-8 bg-white rounded-lg shadow-xl"> */}
-      <div className="contact-form h-[70%] max-w-[70vw] w-[60%] lg:w-[40vw]  p-8 bg-white rounded-lg shadow-xl pb-2">
+      <div className="contact-form h-[70%] w-max-[70vw] w-[60%] lg:w-[40vw]  p-8 bg-white rounded-lg shadow-xl">
         <form className="">
           <div className="grid grid-cols-2 gap-6">
             <div className="relative">
@@ -100,3 +236,4 @@ const FormSection = () => {
 };
 
 export default FormSection;
+
