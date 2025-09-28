@@ -83,15 +83,13 @@ const TopOrderPage = () => {
   }, [filter, sortBy]);
 
   const genres = [
-    "all",
+     "all",
     "Mystery",
-    "Competetive",
-    "Research",
-    "Fantasy",
     "Romance",
     "Fiction",
     "Science",
-    
+    "Competitive",
+    "Fantasy",
     
   ];
 
