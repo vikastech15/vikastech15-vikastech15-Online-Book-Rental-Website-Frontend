@@ -19,27 +19,13 @@ const FormSection = () => {
     .then((result) => {
       console.log(result.text);
       toast.success('✅ Message sent successfully!', {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
+      
       });
       form.current.reset(); // clear form after success
     }, (error) => {
       console.log(error.text);
       toast.error("❌ Failed to send message. Kindly refresh the page.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
+       
       });
     });
   };
@@ -141,7 +127,19 @@ const FormSection = () => {
           >
             Submit
           </button>
-           <ToastContainer />
+           <ToastContainer 
+                position="top-right"
+                theme="light"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                progressStyle={{ backgroundColor: "purple" }}
+              />
         </form>
       </div>
     </section>
