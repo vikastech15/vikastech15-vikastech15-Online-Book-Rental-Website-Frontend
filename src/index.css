@@ -21,3 +21,42 @@ body {
 
 
 }
+
+
+
+.Toastify__progress-bar {
+  background-color: rgb(248, 122, 122) !important;
+}
+
+/* If you want per-toast-type colors instead */
+.Toastify__progress-bar--success {
+  background-color: rgb(248, 122, 122) !important;
+}
+.Toastify__progress-bar--error {
+  background-color: rgba(255, 237, 40, 0.933) !important;
+}
+.Toastify__progress-bar--info {
+  background-color: rgb(255,162,162) !important;
+}
+.Toastify__progress-bar--warning {
+  background-color: rgb(255,162,162) !important;
+}
+
+.Toastify__toast--success .Toastify__toast-icon svg {
+  fill: rgb(248, 122, 122)!important;
+}
+
+.Toastify__toast--error .Toastify__toast-icon svg {
+  
+  fill: orange !important;
+}
+
+/* Info */
+.Toastify__toast--info .Toastify__toast-icon svg {
+  fill: black !important;
+}
+
+/* Warning */
+.Toastify__toast--warning .Toastify__toast-icon svg {
+  fill: blue !important;
+}
