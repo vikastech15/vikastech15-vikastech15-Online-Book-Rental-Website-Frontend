@@ -1,5 +1,49 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
 
 const FormSection = () => {
+
+   const form = useRef();
+
+    const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'vikas_630777',         // ✅ new service ID
+      'template_3hoaq4q',     // ✅ new template ID
+      form.current,
+      'DwoITBN3NYsWwubOd'     // ✅ new public key
+    )
+    .then((result) => {
+      console.log(result.text);
+      toast.success('✅ Message sent successfully!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      form.current.reset(); // clear form after success
+    }, (error) => {
+      console.log(error.text);
+      toast.error("❌ Failed to send message. Kindly refresh the page.", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+    });
+  };
+
   return (
     // <section className="contact h-[85vh] w-[96%] px-6 py-16 flex justify-between items-center ml-10 mr-10">
     //   <div className="content-left w-[55%] h-[30rem] relative">
@@ -21,12 +65,13 @@ const FormSection = () => {
 
       {/* <div className="contact-form w-[40%] h-[30rem] p-8 bg-white rounded-lg shadow-xl"> */}
       <div className="contact-form h-[70%] w-max-[70vw] w-[60%] lg:w-[40vw]  p-8 bg-white rounded-lg shadow-xl">
-        <form className="">
+        <form ref={form} onSubmit={sendEmail} className="">
           <div className="grid grid-cols-2 gap-6">
             <div className="relative">
               <input
                 type="text"
                 id="first_name"
+                name='first_name'
                 className="block w-full px-0 pt-3 pb-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-700 peer"
                 placeholder="John"
                 required
@@ -42,6 +87,7 @@ const FormSection = () => {
               <input
                 type="text"
                 id="last_name"
+                name='last_name'
                 className="block w-full px-0 pt-3 pb-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-700 peer"
                 placeholder="Doe"
                 required
@@ -59,6 +105,7 @@ const FormSection = () => {
             <input
               type="email"
               id="email"
+              name='email'
               className="block w-full px-0 pt-3 pb-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-700 peer"
               placeholder="john@example.com"
               required
@@ -74,6 +121,7 @@ const FormSection = () => {
           <div className="relative">
             <textarea
               id="message"
+              name='msg'
               rows="4"
               className="block w-full px-0 pt-3 pb-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-red-700 peer"
               placeholder="Your message here..."
@@ -93,6 +141,7 @@ const FormSection = () => {
           >
             Submit
           </button>
+           <ToastContainer />
         </form>
       </div>
     </section>
