@@ -361,7 +361,7 @@ const TopOrderPage = () => {
                   whileHover={{ scale: 1.01 }}
                   className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-all"
                 >
-                  <div className="flex flex-col md:flex-row">
+                  <div className="flex flex-col md:flex-row"  onClick={() => handleShowBooks(book._id)}>
                     <div className="md:w-1/4 h-48 md:h-auto">
                       <img
                         src={
