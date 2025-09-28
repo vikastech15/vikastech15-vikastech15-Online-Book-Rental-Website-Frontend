@@ -365,10 +365,10 @@ const TopOrderPage = () => {
                     <div className="md:w-1/4 h-48 md:h-auto">
                       <img
                         src={
-                            book.images[0].url.startsWith("http")
-    ? book.images[0].url
-    : `/${book.images[0].url}`
-                        }
+                        book.images[0].url.startsWith("http")
+                          ? book.images[0].url
+                          : `${API_URL}/${book.images[0].url}`
+                      }
                         alt={book.title}
                         className="w-full h-full object-cover"
                       />
