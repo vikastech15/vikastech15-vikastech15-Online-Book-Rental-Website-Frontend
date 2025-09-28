@@ -74,6 +74,7 @@ export default function Login() {
         localStorage.setItem("userEmail", email);
         navigate("/");
       } else {
+        alert("Account doesn't exist");
         // Redirect to signup with pre-filled email maybe
         navigate("/signup", { state: { email } });
       }
