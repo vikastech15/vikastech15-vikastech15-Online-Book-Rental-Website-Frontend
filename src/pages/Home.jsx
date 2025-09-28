@@ -5,12 +5,14 @@ import Mainbody from '../components/mainbody';
 import Footer from '../components/footer';
 import FormSection from '../components/formSection';
 import ChatBot from '../components/ChatBot';
+import About from '../components/About';
 const home = () => {
   return (
 
     <>
       <Navbar/>
     <Carousel/>
+      <About/>
    
     <div className='form-input mb-8'>
       <FormSection/>
