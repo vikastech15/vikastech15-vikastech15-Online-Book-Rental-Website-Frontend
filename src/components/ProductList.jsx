@@ -354,7 +354,7 @@ const TopOrderPage = () => {
             <AnimatePresence>
               {books.map((book, index) => (
                 <motion.div
-                  key={book.id}
+                  key={book._id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
@@ -419,6 +419,7 @@ const TopOrderPage = () => {
 
                       <div className="mt-auto flex space-x-2">
                         <motion.button
+                          onClick={() => handleBuyBook(book)}
                           whileHover={{ scale: 1.03 }}
                           whileTap={{ scale: 0.97 }}
                           disabled={book.availability === "Out of Stock"}
@@ -429,7 +430,7 @@ const TopOrderPage = () => {
                           }`}
                         >
                           <ShoppingCartIcon className="w-4 h-4 mr-1" />
-                          {book.rentalPrice ? "Rent Now" : "Buy Now"}
+                          {book.rentalPrice ? "Rent" : "Buy"}
                         </motion.button>
 
                         <motion.button
