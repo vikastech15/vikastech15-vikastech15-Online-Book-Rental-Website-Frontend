@@ -14,6 +14,7 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/solid";
 import { useLocation } from "react-router-dom";
+import { API_URL } from "../config";
 
 const CheckoutPage = () => {
 const location = useLocation();
@@ -84,7 +85,7 @@ const subtotal = cartItems.reduce(
       const email = localStorage.getItem("userEmail");
       try {
         // Replace with your actual API call
-        const response = await fetch("http://localhost:5000/api/get-address", {
+        const response = await fetch(`${API_URL}/api/get-address`, {
           method: "POST", // Changed from GET to POST to send email in body
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email }),
@@ -113,7 +114,7 @@ const subtotal = cartItems.reduce(
     setIsProcessing(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/order/", {
+      const response = await fetch(`${API_URL}/api//order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -289,7 +290,7 @@ const subtotal = cartItems.reduce(
                               src={
                                 item.images[0].url.startsWith("http")
                                   ? item.images[0].url
-                                  : `http://localhost:5000/${item.images[0].url}`
+                                  : `${API_URL}/${item.images[0].url}`
                               }
                               alt={item.title}
                               className="w-full h-full object-cover"
