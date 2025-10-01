@@ -48,26 +48,7 @@ const cartItems = normalizedLocationItems.length > 0 ? normalizedLocationItems :
    
 
   console.log("Cart Items: ",cartItems);
-  // const cartItems = book
-  //   ? [{ ...book }]
-  //   : [
-  //       {
-  //         id: "680e8663323d1bfe2cd32ffe",
-  //         title: "The Great Gatsby",
-  //         author: "F. Scott Fitzgerald",
-  //         rentalPrice: 4.99,
-  //         rentalPeriod: 14,
-  //         image: "/book1.jpg",
-  //       },
-  //       {
-  //         id: "6819af8d45a86039515d9ac4",
-  //         title: "To Kill a Mockingbird",
-  //         author: "Harper Lee",
-  //         rentalPrice: 3.99,
-  //         rentalPeriod: 21,
-  //         image: "/book2.jpg",
-  //       },
-  //     ];
+
   // State for checkout flow
   const [step, setStep] = useState(1);
   const [paymentMethod, setPaymentMethod] = useState("credit");
@@ -80,25 +61,6 @@ const cartItems = normalizedLocationItems.length > 0 ? normalizedLocationItems :
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [isLoadingAddresses, setIsLoadingAddresses] = useState(true);
 
-  // Mock cart data
-  // const cartItems = [
-  //   {
-  //     id: "680e8663323d1bfe2cd32ffe",
-  //     title: "The Great Gatsby",
-  //     author: "F. Scott Fitzgerald",
-  //     rentalPrice: 4.99,
-  //     rentalPeriod: 14,
-  //     image: "/book1.jpg",
-  //   },
-  //   {
-  //     id: "6819af8d45a86039515d9ac4",
-  //     title: "To Kill a Mockingbird",
-  //     author: "Harper Lee",
-  //     rentalPrice: 3.99,
-  //     rentalPeriod: 21,
-  //     image: "/book2.jpg",
-  //   },
-  // ];
 
   // Calculate totals
   // const subtotal = cartItems.reduce((sum, item) => sum + item.price, 0);
@@ -181,7 +143,11 @@ const subtotal = cartItems.reduce(
   const toggleSection = (section) => {
     setExpandedSection(expandedSection === section ? null : section);
   };
-
+  
+   function AddNewAddress() {
+    navigate("/Profile")
+  }
+  
   return (
     <>
       <Navbar />
@@ -438,6 +404,7 @@ const subtotal = cartItems.reduce(
                         )}
 
                         <motion.button
+                          onClick={AddNewAddress}
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           className="mt-4 px-4 py-2 text-red-600 border border-red-600 rounded-md hover:bg-red-50 transition-colors"
