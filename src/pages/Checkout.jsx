@@ -114,7 +114,7 @@ const subtotal = cartItems.reduce(
     setIsProcessing(true);
 
     try {
-      const response = await fetch(`${API_URL}/api//order`, {
+      const response = await fetch(`${API_URL}/api/order`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
