@@ -28,7 +28,7 @@ const subtotal = cartItems.reduce(
   (sum, item) => sum + item.price,
   0
 );
-
+  console.log(sum);
   const shipping = subtotal > 20 ? 0 : 3.99;
   const tax = subtotal * 0.05;
   const total = subtotal + shipping + tax;
