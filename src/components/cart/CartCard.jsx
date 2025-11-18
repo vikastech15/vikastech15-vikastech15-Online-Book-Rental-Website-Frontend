@@ -1,4 +1,4 @@
-import { API_URL } from "../config";
+import { API_URL } from "../../config";
 import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import {
