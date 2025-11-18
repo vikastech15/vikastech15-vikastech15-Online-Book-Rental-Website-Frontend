@@ -23,12 +23,13 @@ const CartPage = () => {
 
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.cartItems);
+  console.log(cartItems);
+
 const subtotal = cartItems.reduce(
  // (sum, item) => sum + item.price * item.rentalPeriod * item.quantity,
-  (sum, item) => sum + item.price,
+ (sum, item) => sum + Number(item.price) || 0,
   0
 );
-  console.log(sum);
   const shipping = subtotal > 20 ? 0 : 3.99;
   const tax = subtotal * 0.05;
   const total = subtotal + shipping + tax;
