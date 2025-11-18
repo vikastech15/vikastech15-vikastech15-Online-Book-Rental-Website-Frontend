@@ -24,7 +24,8 @@ const CartPage = () => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.cartItems);
 const subtotal = cartItems.reduce(
-  (sum, item) => sum + item.price * item.rentalPeriod * item.quantity,
+ // (sum, item) => sum + item.price * item.rentalPeriod * item.quantity,
+  (sum, item) => sum + item.price,
   0
 );
 
