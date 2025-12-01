@@ -14,7 +14,7 @@ const FormSection = () => {
       'vikas_630777',         // ✅ new service ID
       'template_3hoaq4q',     // ✅ new template ID
       form.current,
-      'DwoITBN3NYsWwubOd'     // ✅ new public key
+      'aU9tda58GgxKXDUZX'     // ✅ new public key
     )
     .then((result) => {
       console.log(result.text);
