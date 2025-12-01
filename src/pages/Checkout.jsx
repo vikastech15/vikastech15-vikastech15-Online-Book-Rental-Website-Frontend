@@ -63,7 +63,7 @@ const cartItems = normalizedLocationItems.length > 0 ? normalizedLocationItems :
   const [isLoadingAddresses, setIsLoadingAddresses] = useState(true);
 
 
-  Calculate totals
+  //Calculate totals
   const subtotal = cartItems.reduce((sum, item) => sum + item.price, 0);
   const tax = subtotal * 0.05; // 5% tax
   const shipping = 2.99; // Flat rate shipping
