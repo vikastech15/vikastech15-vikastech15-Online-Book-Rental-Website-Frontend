@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 h-16 shadow-md bg-white/80 backdrop-blur-md w-full">
       <nav className="overflow-visible">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex">
               <BookOpenIcon className="w-8 h-8 mr-2 text-amber-600" />
@@ -57,22 +57,10 @@ const Navbar = () => {
               </div>
             </div> */}
 
-            <div className="md:hidden">
-              <button
-                type="button"
-                onClick={() => setMenuOpen(!menuOpen)}
-                className="text-gray-500 hover:text-gray-700 focus:outline-none"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-                  />
-                </svg>
-              </button>
-            </div>
+           
+          <div className="flex  space-x-7">
+        
+            <div className=" md:flex space-x-7">
 
             <div className="hidden md:flex items-center space-x-7">
               <NavLink 
@@ -150,8 +138,44 @@ const Navbar = () => {
                 </Menu>
               )}
             </div>
+            
+                        <div className=" flex space-x-7">
+                           <Link to="/Cart" className="text-gray-800 hover:text-red-800 pt-1">
+                          <FontAwesomeIcon icon={faShoppingCart} size="lg" color="black" />
+                            </Link>
+
+                            {email==="vikasvermagupta2@gmail.com" && (
+                            <Link to="/Admin" className="text-gray-800 hover:text-red-800">
+                           <ShieldCheckIcon className="w-7 h-7 text-red-800" />
+                           </Link>
+                             )}
+                         </div>
+            
+              
+            
           </div>
+
+          
+           <div className="md:hidden">
+              <button
+                type="button"
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="text-gray-500 hover:text-gray-700 focus:outline-none"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                  />
+                </svg>
+              </button>
+            </div>
+
+          
         </div>
+            
 
         {menuOpen && (
           <div className="md:hidden px-4 pb-4 bg-white">
@@ -188,7 +212,7 @@ const Navbar = () => {
             <div className="">
               {!isLogin ? (
                 <Link to="/login">
-                  <button className="bg-teal-700 hover:bg-emerald-900 text-white w-full py-2 rounded-md">
+                  <button className="bg-red-800 hover:bg-red-900 hover:shadow-md text-white px-4 py-1.5 rounded-md">
                     Login
                   </button>
                 </Link>
