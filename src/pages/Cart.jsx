@@ -27,7 +27,7 @@ const CartPage = () => {
 
 const subtotal = cartItems.reduce(
  // (sum, item) => sum + item.price * item.rentalPeriod * item.quantity,
- (sum, item) => sum + Number(item.price) || 0,
+ (sum, item) => (sum + Number(item.price)) || 0,
   0
 );
   const shipping = subtotal > 20 ? 0 : 3.99;
