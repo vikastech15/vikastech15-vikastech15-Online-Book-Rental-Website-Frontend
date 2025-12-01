@@ -79,15 +79,7 @@ const Navbar = () => {
               >
                 Add Book
               </NavLink>
-              <Link to="/Cart" className="text-gray-800 hover:text-red-800">
-                <FontAwesomeIcon icon={faShoppingCart} size="lg" color="black" />
-              </Link>
-              {email==="vikasvermagupta2@gmail.com" && (
-                <Link to="/Admin" className="text-gray-800 hover:text-red-800">
-                  <ShieldCheckIcon className="w-7 h-7 text-red-800" />
-                </Link>
-              )}
-
+         
               {!isLogin ? (
                 <Link to="/login">
                   <button className="bg-red-800 hover:bg-red-900 hover:shadow-md text-white px-4 py-1.5 rounded-md">
@@ -175,6 +167,9 @@ const Navbar = () => {
 
           
         </div>
+        </div>
+          
+  </div>
             
 
         {menuOpen && (
