@@ -113,6 +113,7 @@ const cartItems = normalizedLocationItems.length > 0 ? normalizedLocationItems :
           addressId: selectedAddress,
           cartItems,
           paymentMethod,
+           rentalPeriodDays: cartItems.rentalPeriodDays,
         }),
       });
 
