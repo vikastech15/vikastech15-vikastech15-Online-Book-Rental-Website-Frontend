@@ -207,7 +207,7 @@ const AdminDashboard = () => {
                     {filteredUsers.length > 0 ? (
                       filteredUsers.map((user) => (
                         <motion.tr
-                          key={user.id}
+                          key={user._id}
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, x: -50 }}
@@ -302,7 +302,7 @@ const AdminDashboard = () => {
                     {filteredBooks.length > 0 ? (
                       filteredBooks.map((book) => (
                         <motion.tr
-                          key={book.id}
+                          key={book._id}
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, x: -50 }}
